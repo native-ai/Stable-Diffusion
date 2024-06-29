@@ -1,4 +1,7 @@
 import torch.nn as nn
+from torch.nn import functional as F
+from stable_diffusion.nn.modules import SelfAttention
+from stable_diffusion.nn.attention import CrossAttention
 class UNET_ResidualBlock(nn.Module):
     def __init__(self, in_channels, out_channels, n_time=1280):
         super().__init__()

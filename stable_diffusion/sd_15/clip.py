@@ -1,7 +1,6 @@
 import torch
 from torch import nn
-from torch.nn import functional as F
-from attention import SelfAttention
+from stable_diffusion.nn.attention import SelfAttention
 
 
 class CLIPEmbedding(nn.Module):

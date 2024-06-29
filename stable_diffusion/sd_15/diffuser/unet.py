@@ -1,9 +1,8 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
-from stable_diffusion.nn.attention import SelfAttention, CrossAttention
-from nn.modules import SwitchSequential ,UNET_ResidualBlock , UNET_AttentionBlock
-from time_embed import TimeEmbedding
+from stable_diffusion.sd_15.diffuser.nn.modules import SwitchSequential ,UNET_ResidualBlock , UNET_AttentionBlock,Upsample
+from stable_diffusion.sd_15.diffuser.time_embed import TimeEmbedding
 class UNET(nn.Module):
     def __init__(self):
         super().__init__()
